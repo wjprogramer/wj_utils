@@ -1,5 +1,6 @@
 library wj_utils;
 
+export 'utils/color_utils.dart';
 export 'utils/number_utils.dart';
 export 'utils/string_utils.dart';
 
