@@ -8,7 +8,7 @@ class StringUtils {
 
   static bool nonContainNumber(String input) => RegExp(r'^\D+$').hasMatch(input);
 
-  static bool isNullOrEmpty(String s) => (s == null || s.isEmpty) ? true : false;
+  static bool isNullOrEmpty(String? s) => (s == null || s.isEmpty) ? true : false;
 
   static bool isNotNullOrEmpty(String s) => !isNullOrEmpty(s);
 
@@ -18,13 +18,13 @@ class StringUtils {
 
   static String reverse(String s) => String.fromCharCodes(s.runes.toList().reversed);
 
-  static String getFirstEnglishWord(String s) => RegExp(r'([a-zA-Z]+)').stringMatch(s);
+  static String? getFirstEnglishWord(String s) => RegExp(r'([a-zA-Z]+)').stringMatch(s);
 
   /// 找到第一個單字
   /// * 非中文
   /// * 開頭不為數字
   /// * 允許底線
-  static String getFirstWord(String s) => RegExp(r'([a-zA-Z_]+[a-zA-Z_0-9]*)').stringMatch(s);
+  static String? getFirstWord(String s) => RegExp(r'([a-zA-Z_]+[a-zA-Z_0-9]*)').stringMatch(s);
 
   static int countChars(String s, String char, {bool caseSensitive = true}) {
     int count = 0;
